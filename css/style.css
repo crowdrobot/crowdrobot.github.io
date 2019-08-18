@@ -212,18 +212,19 @@ p {
 }
 
 .payment {
-	height: 40vw;
+	padding: 2em 0 10em 0;
+	min-height: 500px;
 }
 
 .payment>h2 {
 	display: block;
 	margin: 0 auto;
-	margin-bottom: 3vw;
+	margin-bottom: 3em;
 }
 
 .payment-content {
 	width: 50%;
-	height: 65%;
+	height: 400px;
 	margin: 0 auto;
 	display: flex;
 	justify-content: center;
@@ -232,51 +233,101 @@ p {
 
 .payment-content_item {
 	flex-basis: 50%;
+	width: 50%;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	background: #4A4A57;
+	border-radius: 0px 20px 20px 0px;
 }
 
 .payment-content_item>h3 {
 	flex: 2;
 	padding-top: 3vw;
+	width: 100%;
+	color: #EDEDEE;
+}
+
+.payment-content_item:first-child>h3 {
+	color: #3B3B3B;
+}
+
+.payment-content_item>h3::after {
+	content: '';
+	display: block;
+	margin: 0 auto;
+	margin-top: .7em;
+	width: 70%;
+	background-color: #D0D0D0;
+	height: 1px;
 }
 
 .payment-content_item>ul {
 	flex: 5;
 	list-style-type: none;
-	padding: 0;
-	margin: 0;
+	margin-block-start: 0;
+	margin-block-end: 0;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	padding-inline-start: 0;
+}
+
+.payment-content_item>ul {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.payment-content_item>ul>li {
+	font-size: 1.4vw;
+}
+
+.payment-content_item>ul>li {
+	color: #EDEDEE;
+}
+
+.payment-content_item:first-child>ul>li {
+	color: #3B3B3B;
+}
+
+.payment-content_item:nth-last-child(2)>ul>li {
+	line-height: 1.8;
 }
 
 .payment-amount {
 	flex: 3;
+	background: #5C5C67;
 	display: flex;
 	width: 100%;
 	justify-content: center;
 	align-items: center;
+	border-bottom-right-radius: 15px;
+}
+
+.payment-content_item:first-child>.payment-amount {
+	background: #E9E9E9;
+	border-bottom-left-radius: 15px;
 }
 
 .payment-amount>h2 {
-	flex: 2;
+	flex: 9;
 	text-align: right;
+	color: #00B9FF;
+	font-size: 2.5vw;
 }
 
-.payment-amount>a {
-	flex: 1;
+.payment-amount>svg {
+	flex: 5;
 	text-align: center;
+	z-index: 20;
+	cursor: pointer;
 }
 
 .payment-content_item:first-child {
 	background: #EFEFEF;
 	border-radius: 20px 0px 0px 20px;
-}
-
-.payment-content_item {
-	background: #4A4A57;
-	border-radius: 0px 20px 20px 0px;
 }
 
 .circlesr {
