@@ -224,7 +224,8 @@ p {
 
 .payment-content {
 	width: 50%;
-	height: 400px;
+	min-height: 350px;
+	height: 1vw;
 	margin: 0 auto;
 	display: flex;
 	justify-content: center;
@@ -246,6 +247,7 @@ p {
 .payment-content_item>h3 {
 	flex: 2;
 	padding-top: 3vw;
+	font-size: calc(10px + 0.8vw);
 	width: 100%;
 	color: #EDEDEE;
 }
@@ -282,7 +284,7 @@ p {
 }
 
 .payment-content_item>ul>li {
-	font-size: 1.4vw;
+	font-size: calc(10px + .7vw);
 }
 
 .payment-content_item>ul>li {
@@ -298,7 +300,7 @@ p {
 }
 
 .payment-amount {
-	flex: 3;
+	flex: 2;
 	background: #5C5C67;
 	display: flex;
 	width: 100%;
@@ -316,16 +318,15 @@ p {
 	content: 'Monthly';
 	color: #D0D0D0;
 	display: block;
-	font-size: 11px;
+	font-size: calc(5px + .5vw);
 	margin: 0 0;
 	padding: 0 0;
 }
 
 .payment-amount>h2 {
-	flex: 9;
 	text-align: right;
 	color: #00B9FF;
-	font-size: 2.5vw;
+	font-size: calc(12px + .9vw);
 }
 
 .payment-amount>a {
@@ -1623,5 +1624,31 @@ footer {
 		left: 42%;
 		font-size: 0.97vw;
 		line-height: 1.25vw;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.payment-content {
+		flex-direction: column;
+		width: 80%;
+		min-height: 450px;
+	}
+	.payment-content_item:first-child {
+		border-top-right-radius: 15px;
+	}
+	.payment-content_item:first-child>.payment-amount {
+		border-bottom-left-radius: 0px;
+		border-bottom-right-radius: 0px;
+	}
+	.payment-amount-2 {
+		border-bottom-right-radius: 15px;
+		border-bottom-left-radius: 15px;
+	}
+	.payment-amount:first-child {
+		border-top-left-radius: 15px;
+	}
+	.payment-content_item:nth-child(2) {
+		border-bottom-left-radius: 15px;
+		border-top-right-radius: 0px;
 	}
 }
